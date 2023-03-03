@@ -92,3 +92,10 @@ Content-Type: application/json
     "password":"test",
     "email":"test@gmail.com"
 }
+
+###
+GET http://localhost:8000/api/user?limit=10
+
+
+###
+GET http://localhost:8000/api/user/1

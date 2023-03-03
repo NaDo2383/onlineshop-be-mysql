@@ -5,18 +5,37 @@ const bcrypt = require("bcrypt");
 const saltRounds = 10;
 const myPlaintextPassword = "s0//P4$$w0rD";
 
+const userService = require("../model/user-service");
+
 const dataFile = process.cwd() + "/data/user.json";
 
-exports.getAll = (req, res) => {
-  fs.readFile(dataFile, "utf-8", (readErr, data) => {
-    if (readErr) {
-      return res.json({ status: false, message: readErr });
+exports.getAll = async (req, res) => {
+  const { limit } = req.query;
+
+  try {
+    const result = await userService.getUsers(limit);
+    if (result.length > 0) {
+      res.json({ status: true, result });
     }
+  } catch (err) {
+    console.log(err);
+    res.json({ status: false, message: err });
+  }
+};
 
-    const savedData = data ? JSON.parse(data) : [];
+exports.getOne = async (req, res) => {
+  const { id } = req.params;
 
-    return res.json({ status: true, result: savedData });
-  });
+  if (!id) {
+    return res.json({ status: false, message: "user not found" });
+  }
+
+  try {
+    const result = await userService.getUser(id);
+    res.json({ status: true, result });
+  } catch (err) {
+    res.json({ status: false, err });
+  }
 };
 
 exports.create = (req, res) => {
