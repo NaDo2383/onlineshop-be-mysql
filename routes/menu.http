@@ -1,0 +1,94 @@
+### 
+GET  http://localhost:8000/api/products
+
+
+### 
+GET  http://localhost:8000/api/products/1676261590588product
+
+### 
+POST  http://localhost:8000/api/menu
+Content-Type: application/json
+
+{
+    "menuName":"Cate1",
+    "link":"/cate1",
+    "position":1
+}
+
+### 
+POST  http://localhost:8000/api/user
+Content-Type: application/json
+
+{
+    "userName" : "nado",
+    "firstName": "narandorj",
+    "lastName":"Byambadorj",
+    "age":25,
+    "address":"ub dadadada",
+    "isAdmin": true
+}
+
+### 
+POST  http://localhost:8000/api/cate
+Content-Type: application/json
+
+{
+    "cateName" : "cloth1"
+}
+
+
+### 
+DELETE   http://localhost:8000/api/menu
+Content-Type: application/json
+
+{
+    "arrWillDelete":["1675646259709","1675646266597"]
+}
+
+
+### 
+DELETE   http://localhost:8000/api/menu/1675393142861
+
+
+### 
+DELETE   http://localhost:8000/api/products/1676287237395product
+
+
+### 
+POST  http://localhost:8000/api/user
+Content-Type: application/json
+
+{
+    "userName":"test",
+      "firstName":"test",
+      "lastName":"test",
+      "age":"test",
+      "address":"test",
+      "isAdmin":"test",
+      "password":"testpass"
+}
+
+### 
+GET   http://localhost:8000/api/user/login
+Content-Type: application/json
+
+{
+    "email":"test@gmail.com",
+    "userName":"test",
+    "password":"test"
+}
+
+### 
+post  http://localhost:8000/api/user
+Content-Type: application/json
+
+{
+    "userName":"test",
+    "firstName":"test",
+    "lastName":"test",
+    "age":"test",
+    "address":"test",
+    "isAdmin":"test",
+    "password":"test",
+    "email":"test@gmail.com"
+}

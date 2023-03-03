@@ -1,0 +1,18 @@
+[
+  {
+    "id": "1676261590588product",
+    "createdDated": 1676261590588,
+    "productName": "Wooden Cupboard 3 row",
+    "price": "63.47",
+    "thumbImage": "https://res.cloudinary.com/dpgnl2yyr/image/upload/v1676261583/shop/iizjxzdninxh4faokghj.png",
+    "images": [
+      "https://res.cloudinary.com/dpgnl2yyr/image/upload/v1676261588/shop/m0p6qpcsxbm8e7ma6ba7.png",
+      "https://res.cloudinary.com/dpgnl2yyr/image/upload/v1676261589/shop/tcxkxpmfdxonyrxnqv7m.png",
+      "https://res.cloudinary.com/dpgnl2yyr/image/upload/v1676261589/shop/kzaxaasaoczybhp8nbuw.png"
+    ],
+    "quantity": "100",
+    "description": "Combination of wood aand wool",
+    "createdUserId": "1675339438316user",
+    "categoryId": ["Cupboard"]
+  }
+]
